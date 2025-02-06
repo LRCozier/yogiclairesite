@@ -9,7 +9,6 @@ const Classes = () => {
 
   return (
     <>
-    <div className="container">
     <section className="yogiclaire-section">
       <h2>Our Classes</h2>
       <div className="class-list">
@@ -23,7 +22,6 @@ const Classes = () => {
         ))}
       </div>
     </section>
-    </div>
     </>
   );
 }
