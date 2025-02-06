@@ -8,6 +8,7 @@
   align-items: center;
   text-align: center;
   padding: 2rem;
+  text-wrap: pretty;
 }
 
 /*END - SECTION STYLES*/
@@ -15,8 +16,6 @@
 /*START - HERO SECTION*/
 
 #hero {
-  min-height: 100vh;
-  text-align: center;
   padding: 4rem 2rem;
   background: url(../assets/Images/heropicture.jpg) no-repeat center center/cover;
   color: var(--secondary-color);
@@ -27,3 +26,68 @@
 }
 
 /*END - HERO SECTION*/
+
+/*START - CLASSES*/
+
+.class-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .class-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .class-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.class-item {
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px var(--card-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.class-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px var(--card-shadow);
+}
+
+.class-item h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.class-item p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.class-item p strong {
+  color: var(--text-color);
+}
+
+@media (min-width: 768px) {
+  .yogiclaire-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .class-item h3 {
+    font-size: 1.75rem;
+  }
+
+  .class-item p {
+    font-size: 1.125rem;
+  }
+}
+
+
+/*END - CLASSES*/
