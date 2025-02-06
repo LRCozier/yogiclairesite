@@ -1,0 +1,29 @@
+/*START - OVERALL SECTION STYLES*/
+
+.yogiclaire-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/*END - SECTION STYLES*/
+
+/*START - HERO SECTION*/
+
+#hero {
+  min-height: 100vh;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: url(../assets/Images/heropicture.jpg) no-repeat center center/cover;
+  color: var(--secondary-color);
+}
+
+#hero h1 {
+  font-size: 2rem;
+}
+
+/*END - HERO SECTION*/
