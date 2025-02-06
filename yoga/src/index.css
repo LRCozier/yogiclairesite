@@ -2,6 +2,12 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --primary-color: #2A9D8F;
+  --secondary-color: #90BE6D;
+  --text-color: #333333;
+  --background-color: #F4F1DE;
+  --font-primary: 'Numans', serif;
+  
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -11,4 +17,17 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
 }
