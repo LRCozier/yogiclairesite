@@ -5,7 +5,7 @@ const Contact = () => {
 
   return(
     <>
-    <section>
+    <section className="yogiclaire-section">
       <ContactForm />
     </section>
     </>
