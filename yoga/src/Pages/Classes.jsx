@@ -10,7 +10,7 @@ const Classes = () => {
   return (
     <>
     <section className="yogiclaire-section">
-      <h2>Our Classes</h2>
+      <h2>My Classes</h2>
       <div className="class-list">
         {classList.map((yogaClass, index) => (
           <div className="class-item" key={index}>
