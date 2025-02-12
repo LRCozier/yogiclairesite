@@ -1,4 +1,4 @@
-import "./Footer.css";
+import './Footer.css';
 import {SocialIcon} from 'react-social-icons';
 import 'react-social-icons/facebook';
 import 'react-social-icons/instagram';
