@@ -6,7 +6,9 @@ const Contact = () => {
   return(
     <>
     <section className="yogiclaire-section">
-      <h2>Contact Me</h2>
+      <div className="section-header">
+        <h2>Contact Me</h2>
+      </div>
       <ContactForm />
     </section>
     </>

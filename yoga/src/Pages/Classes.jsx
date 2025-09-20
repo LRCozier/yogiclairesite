@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Classes = () => {
   const classList = [
@@ -8,21 +9,33 @@ const Classes = () => {
   ];
 
   return (
-    <>
-    <section className="yogiclaire-section">
-      <h2>My Classes</h2>
-      <div className="class-list">
-        {classList.map((yogaClass, index) => (
-          <div className="class-item" key={index}>
-            <h3>{yogaClass.name}</h3>
-            <p>{yogaClass.description}</p>
-            <p><strong>{yogaClass.time}</strong></p>
-            <p><strong>{yogaClass.location}</strong></p>
-          </div>
-        ))}
+    <section id="classes" className="page-section">
+      <div className="container">
+        <div className="section-header">
+            <h2>Class Offerings</h2>
+            <p>Choose from a variety of yoga styles and formats to suit your needs and schedule</p>
+        </div>
+        <div className="class-grid">
+          {classList.map((yogaClass, index) => (
+            <div className="class-card" key={index}>
+                <div className="class-card-image">
+                    {/* ADD IMAGES */}
+                    <span>{yogaClass.name}</span>
+                </div>
+                <div className="class-card-content">
+                    <h3>{yogaClass.name}</h3>
+                    {yogaClass.description && <p>{yogaClass.description}</p>}
+                    <div className="class-card-details">
+                        <p><strong>Time:</strong> {yogaClass.time}</p>
+                        <p><strong>Location:</strong> {yogaClass.location}</p>
+                    </div>
+                     <Link to="/contact" className="btn btn-primary" style={{width: '100%', marginTop: '1rem'}}>Book Now</Link>
+                </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
-    </>
   );
 }
 

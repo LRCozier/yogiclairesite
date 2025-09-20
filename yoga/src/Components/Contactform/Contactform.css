@@ -1,56 +1,77 @@
-/*START - CONTACT FORM*/
-
-.yoga-query-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: var(--background-color);
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: left;
 }
 
-.yoga-query-form label {
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
   display: block;
-  margin-top: 10px;
-  color: var(--text-color);
-  font-family: var(--font-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-.yoga-query-form input, 
-.yoga-query-form textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-family: var(--font-primary);
-  color: var(--background-color);
-  background-color: #fff;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.yoga-query-form input:focus, 
-.yoga-query-form textarea:focus {
-  border-color: var(--primary-color);
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
-  box-shadow: 0 0 4px rgba(42, 157, 143, 0.5);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(52, 58, 64, 0.1);
 }
 
-.yoga-query-form button {
+.contact-form button {
   width: 100%;
-  padding: 10px;
-  margin-top: 15px;
-  background-color: var(--primary-color);
-  color: white;
+  padding: 0.875rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  font-family: var(--font-primary);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
-.yoga-query-form button:hover {
-  background-color: var(--secondary-color);
+.contact-form button:hover:not(:disabled) {
+  background-color: #495057;
 }
 
-/*END - CONTACT FORM*/
+.contact-form button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Error Styling */
+.input-error {
+  border-color: var(--color-error);
+}
+
+.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+}
+
+.error-text {
+  color: var(--color-error);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.submission-message {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
