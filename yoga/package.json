@@ -2,6 +2,7 @@
   "name": "yoga",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://LRCozier.github.io/yogiclairesite",
   "type": "module",
   "scripts": {
     "dev": "vite",
