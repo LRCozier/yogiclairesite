@@ -1,0 +1,66 @@
+/* ============================================= */
+/* CONTACT FORM                                  */
+/* ============================================= */
+
+.contact-form {
+  max-width: 700px;
+  margin: 2rem auto;
+
+  &__group {
+    margin-bottom: 1.5rem;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid $color-border;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: $color-white;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+    }
+
+    &--error {
+      border-color: $color-error;
+      &:focus {
+        box-shadow: 0 0 0 3px rgba($color-error, 0.15);
+      }
+    }
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1rem;
+    &:disabled {
+      background-color: $color-secondary;
+      cursor: not-allowed;
+    }
+  }
+
+  &__error-text {
+    color: $color-error;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+  }
+
+  &__submission-message {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    color: $color-primary;
+  }
+}
