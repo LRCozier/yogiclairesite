@@ -1,27 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import heroPicture from '../Images/heropicture.jpg';
+import './Home.scss';
 
 const Home = () => {
   return (
-    <section id="hero" className="page-section hero-section">
-      <div className="container hero-content">
-        <div className="hero-text">
-          <h1>Find Your Balance in Richmond</h1>
-          <p>
-            Join me for transformative yoga classes designed to strengthen your
-            body, calm your mind, and nurture your soul. All levels welcome.
-          </p>
-          <div className="hero-buttons">
-            <Link to="/classes" className="btn btn-primary">Book Your First Class</Link>
-            <Link to="/classes" className="btn btn-secondary">View Schedule</Link>
+    <main className="home-page">
+      <section className="hero">
+        <div className="container hero__content">
+          <div className="hero__text">
+            <h1>Find Your Balance in Richmond</h1>
+            <p>
+              Join me for transformative yoga classes designed to strengthen your
+              body, calm your mind, and nurture your soul. All levels welcome.
+            </p>
+            <div className="hero__buttons">
+              <Link to="/classes" className="btn btn--primary">View Classes</Link>
+              <Link to="/contact" className="btn btn--secondary">Get in Touch</Link>
+            </div>
+          </div>
+          <div className="hero__image">
+             <img src={heroPicture} alt="Yogi Claire in a yoga pose in a natural setting"/>
           </div>
         </div>
-        <div className="hero-image">
-           <img src={heroPicture} alt="yogi claire yoga pose"/>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
 
