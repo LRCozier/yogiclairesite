@@ -1,11 +1,12 @@
-@import '../../styles/variables';
+@use 'sass:color';
+@use '../../styles/variables' as var;
 
 .footer {
-  background-color: darken($color-background, 3%);
-  border-top: 1px solid $color-border;
+  background-color: color.adjust(var.$color-background, $lightness: -3%);
+  border-top: 1px solid var.$color-border;
   padding: 3rem 0 0;
   font-size: 0.9rem;
-  color: lighten($color-text, 20%);
+  color: color.adjust(var.$color-text, $lightness: 20%);
 
   &__content {
     display: grid;
@@ -21,7 +22,7 @@
   }
 
   h3, h4 {
-    color: $color-primary;
+    color: var.$color-primary;
     margin-bottom: 1rem;
   }
 
@@ -38,7 +39,7 @@
       text-decoration: none;
       transition: color 0.2s ease;
       &:hover {
-        color: $color-primary;
+        color: var.$color-primary;
       }
     }
   }
@@ -59,7 +60,7 @@
   }
 
   &__bottom {
-    border-top: 1px solid $color-border;
+    border-top: 1px solid var.$color-border;
     text-align: center;
     padding: 1.5rem 0;
     p {

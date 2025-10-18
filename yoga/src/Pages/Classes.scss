@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@use 'sass:color';
+@use '../Styles/variables' as var;
 
 .classes-page {
   padding: 4rem 0;
@@ -30,9 +31,9 @@
   }
 
   .class-card {
-    background: $color-white;
+    background: var.$color-white;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba($color-text, 0.08);
+    box-shadow: 0 4px 15px rgba(var.$color-text, 0.08);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -40,7 +41,7 @@
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba($color-text, 0.12);
+      box-shadow: 0 8px 25px rgba(var.$color-text, 0.12);
     }
 
     &__content {
@@ -60,7 +61,7 @@
     &__details {
       margin: 1rem 0;
       font-size: 0.9rem;
-      border-top: 1px solid $color-border;
+      border-top: 1px solid var.$color-border;
       padding-top: 1rem;
       p {
         margin: 0.25rem 0;

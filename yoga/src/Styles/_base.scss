@@ -1,13 +1,18 @@
-/* ============================================= */
-/* BASE & GLOBAL STYLES                          */
-/* ============================================= */
+@use 'sass:color';
+@use 'variables' as var;
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@400;500;600&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: $font-body;
-  background-color: $color-background;
-  color: $color-text;
+  font-family: var.$font-body;
+  background-color: var.$color-background;
+  color: var.$color-text;
   line-height: 1.6;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -16,13 +21,13 @@ body {
 
 .container {
   width: 90%;
-  max-width: $container-width;
+  max-width: var.$container-width;
   margin: 0 auto;
 }
 
 h1, h2, h3, h4 {
-  font-family: $font-heading;
-  color: $color-primary;
+  font-family: var.$font-heading;
+  color: var.$color-primary;
   font-weight: 600;
 }
 
@@ -47,22 +52,22 @@ img {
   text-align: center;
 
   &--primary {
-    background-color: $color-primary;
-    color: $color-white;
+    background-color: var.$color-primary;
+    color: var.$color-white;
 
     &:hover {
-      background-color: darken($color-primary, 7%);
+      background-color: color.adjust(var.$color-primary, $lightness: -7%);
     }
   }
 
   &--secondary {
     background-color: transparent;
-    color: $color-primary;
-    border-color: $color-primary;
+    color: var.$color-primary;
+    border-color: var.$color-primary;
 
     &:hover {
-      background-color: $color-primary;
-      color: $color-white;
+      background-color: var.$color-primary;
+      color: var.$color-white;
     }
   }
 }

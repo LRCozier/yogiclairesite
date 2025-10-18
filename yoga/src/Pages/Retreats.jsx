@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import retreatImage from '../Images/retreat.jpg';
 import './Retreats.scss';
 
 const Retreats = () => {
@@ -17,7 +16,7 @@ const Retreats = () => {
       <section className="container">
         <div className="two-column-layout">
           <div className="two-column-layout__image">
-            <img src={retreatImage} alt="Peaceful yoga retreat setting" />
+            {/* ADD IMAGE */}
           </div>
           <div className="two-column-layout__text">
             <h2>Upcoming Retreat: Forest Sanctuary</h2>

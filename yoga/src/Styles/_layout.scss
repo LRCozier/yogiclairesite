@@ -1,6 +1,4 @@
-/* ============================================= */
-/* LAYOUTS                                       */
-/* ============================================= */
+@use 'variables' as var;
 
 .two-column-layout {
   display: grid;
@@ -31,7 +29,7 @@
       width: 100%;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 10px 25px rgba($color-text, 0.1);
+      box-shadow: 0 10px 25px rgba(var.$color-text, 0.1);
       display: block;
     }
   }

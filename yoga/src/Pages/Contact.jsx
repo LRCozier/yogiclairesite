@@ -1,6 +1,6 @@
 import React from 'react';
-import ContactForm from '../components/ContactForm';
 import './Contact.scss';
+import ContactForm from '../Components/Contactform/Contactform';
 
 const Contact = () => {
   return (
@@ -12,7 +12,7 @@ const Contact = () => {
             Have questions about classes, retreats, or private sessions? Fill out the form below and I'll get back to you soon.
           </p>
         </div>
-        <ContactForm />
+       <ContactForm/>
       </div>
     </main>
   );

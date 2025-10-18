@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import educationImage from '../Images/education.jpg';
 import './YogaInEducation.scss';
 
 const YogaInEducation = () => {
@@ -16,7 +15,7 @@ const YogaInEducation = () => {
       <section className="container">
         <div className="two-column-layout two-column-layout--reverse">
           <div className="two-column-layout__image">
-            <img src={educationImage} alt="Children doing yoga in a classroom setting" />
+            {/* ADD IMAGE */}
           </div>
           <div className="two-column-layout__text">
             <h3>Benefits for Students</h3>
