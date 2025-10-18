@@ -1,26 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
-import "./Navbar.css";
+import "./Navbar.scss";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className="header">
       <nav className="navbar container">
-        <div id="logo">
+        <div className="navbar__logo">
           <Link to="/" onClick={closeMenu}>Yogi Claire</Link>
         </div>
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="navbar__toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu" aria-expanded={menuOpen}>
           {menuOpen ? "✕" : "☰"}
         </button>
-        <ul className={menuOpen ? "nav-links open" : "nav-links"}>
-          <li><Link to="/about" onClick={closeMenu}>About</Link></li>
-          <li><Link to="/classes" onClick={closeMenu}>Classes</Link></li>
-          <li><Link to="/retreats" onClick={closeMenu}>Retreats</Link></li>
-          <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+        <ul className={menuOpen ? "navbar__links navbar__links--open" : "navbar__links"}>
+          <li className="navbar__item"><NavLink to="/about" className="navbar__link" onClick={closeMenu}>About</NavLink></li>
+          <li className="navbar__item"><NavLink to="/classes" className="navbar__link" onClick={closeMenu}>Classes</NavLink></li>
+          <li className="navbar__item"><NavLink to="/retreats" className="navbar__link" onClick={closeMenu}>Retreats</NavLink></li>
+          <li className="navbar__item"><NavLink to="/yoga-in-education" className="navbar__link" onClick={closeMenu}>Education</NavLink></li>
+          <li className="navbar__item"><NavLink to="/contact" className="navbar__link" onClick={closeMenu}>Contact</NavLink></li>
         </ul>
       </nav>
     </header>

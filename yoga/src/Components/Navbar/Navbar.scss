@@ -1,0 +1,112 @@
+/* ============================================= */
+/* HEADER & NAVIGATION                           */
+/* ============================================= */
+
+.header {
+  background-color: $color-background;
+  border-bottom: 1px solid $color-border;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $header-height;
+
+  &__logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: $color-primary;
+    font-family: $font-heading;
+    font-weight: 600;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-text;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $color-secondary;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after,
+    &.active::after {
+      width: 100%;
+    }
+
+    &:hover,
+    &.active {
+      color: $color-primary;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    font-size: 1.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    color: $color-primary;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    &__toggle {
+      display: block;
+    }
+
+    &__links {
+      flex-direction: column;
+      position: absolute;
+      top: $header-height;
+      left: 0;
+      width: 100%;
+      background-color: $color-background;
+      border-bottom: 1px solid $color-border;
+      padding: 1rem 0;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+
+      &--open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    &__item {
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+  }
+}
