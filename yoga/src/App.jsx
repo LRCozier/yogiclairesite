@@ -6,8 +6,7 @@ import About from './Pages/About';
 import Classes from './Pages/Classes';
 import Contact from './Pages/Contact';
 import Footer from './Components/Footer/Footer';
-import './App.css'
-
+import '../src/Styles/main.scss';
 
 const App = () => {
 
