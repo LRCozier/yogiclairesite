@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Routes, Route } from "react-router-dom";
 import React from 'react'
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home';
@@ -14,7 +14,6 @@ const App = () => {
 
   return (
     <>
-    <Router>
       <Navbar />
       <main>
       <Routes>
@@ -27,7 +26,6 @@ const App = () => {
       </Routes>
       </main>
       <Footer/>
-    </Router>
     </>
   )
 }
